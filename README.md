@@ -151,27 +151,7 @@ Configuration & quick edits
   - Chat model used inside streaming functions: currently `"llama3.2"`
 - If you do not have a CUDA GPU, change:
   - `SentenceTransformer(SENTENCE_MODEL, device="cuda")` -> `device="cpu"` in `drug_disease.py`
-- Adjust chunk size if you want to create larger/smaller FAISS chunks (currently 500 words).
-
-Troubleshooting
----------------
-- Ollama connection errors:
-  - Ensure the Ollama daemon is running and reachable from the environment where the Flask app runs.
-  - Check the Ollama client and install correct Python package/version for your system.
-- FAISS import / install issues:
-  - On some platforms you must install `faiss-cpu` or `faiss-gpu` via pip or conda. See FAISS docs.
-- SentenceTransformer / Torch:
-  - If sentence-transformers fails to load a model because of missing torch, install torch (CPU or GPU flavor).
-- GPU memory errors:
-  - If the SentenceTransformer or models are on GPU and you run out of memory, switch to CPU.
-- If results are poor:
-  - Improve or expand `data/medical_data.txt` and `data/drug_interactions.txt`.
-  - Tune chunking or k (number of retrieved nearest neighbors).
-
-Security & privacy
-------------------
-- This project may send text to local Ollama; ensure no sensitive patient data is processed unless you have proper approvals and security.
-- This demo is not HIPAA-compliant or intended for real patient care.
+- Adjust chunk size if you want to create larger/smaller FAISS chunks (currently 500 words)
 
 Extending the project
 ---------------------
