@@ -1,10 +1,18 @@
 #RAG BASED DOCTOR ASSISTANT CHATBOT
+
+
 PREPARED BY
+
 ROHIT MEWADA(0537AL221023)
+
 ROHIT MEENA(0537AL221022)
+
 HARSHIT(0537AL221014)
 
-#Intro
+
+#INTRO
+
+
 A small Flask-based assistant that helps with:
 - answering drug / disease related questions using semantic retrieval over a local medical text corpus, and
 - explaining drug–drug interactions using a separate interaction dataset.
